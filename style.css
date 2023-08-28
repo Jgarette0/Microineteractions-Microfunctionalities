@@ -1,0 +1,144 @@
+.flip-card {
+  background-color: transparent;
+  width: 350px;
+  height: 440px;
+  perspective: 1000px;
+  font-family: sans-serif;
+  -webkit-margin-start: 30%;
+  margin-top: 60px;
+}
+.flip-card {
+  background-color: transparent;
+  width: 350px;
+  height: 440px;
+  perspective: 1000px;
+  font-family: sans-serif;
+  -webkit-margin-start: 30%;
+  margin-top: 60px;
+  
+}
+
+.title {
+  font-size: 2.4em;
+  font-weight: 900;
+  text-align: center;
+  margin:0;
+  padding-bottom: 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: flex;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid rgb(195, 177, 248);
+  border-radius: 1rem;
+}
+
+.flip-card-front {
+  background: linear-gradient(120deg, rgb(133, 99, 255) 60%, rgb(175, 148, 255) 88%,
+  #d8daf7);
+  color: rgb(0, 0, 0);
+}
+
+.flip-card-back {
+  background: #979dec;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.h1{
+  margin-left: 12px;
+  font-size: 80px;
+  font-family:'Times New Roman', Times, serif;
+  padding:none;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-left: 15%;
+}
+.weekday{
+  margin-left: 17%;
+  margin-top:0;
+  margin-bottom: 2%;
+
+}
+.discount{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 56px;
+  margin-left:57%;
+
+}
+.h5{
+  margin-left: 35px;
+  padding:1px;
+  font-size: .975em;
+  margin-bottom:10%;
+  margin-top: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.titles {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 30px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.input {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #6525e4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+
