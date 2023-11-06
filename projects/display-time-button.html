@@ -1,0 +1,74 @@
+
+<style>
+ button{
+  display: flex;
+  align-items: center;
+  padding: 10px 15px 10px 20px;
+  border-radius: 10px;
+  border:1px solid rgb(128, 128, 128);
+  cursor:pointer;
+  column-gap: 3px;
+  background-color: transparent;
+ }
+ 
+ .timeIcon{
+  transition: transform .5s;
+ }
+ .clickBtn:hover .timeIcon{
+  transform: translateX(4px);
+ }
+ .timeIcons{
+  transform: rotate(90deg);
+ }
+ .clickBtns:hover .timeIcons{
+  transform: rotate(90deg);
+ }
+ 
+ 
+ </style>
+ 
+ <button class="clickBtn">Time
+  <span>
+   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="timeIcon"><path d="m9 18 6-6-6-6"/>
+   </svg>
+  </span>
+ </button>
+ <div class="dsply"></div>
+ 
+ <script src="https://unpkg.com/dayjs@1.11.10/dayjs.min.js"></script>
+ 
+ <script>
+  const timeIcon = document.querySelector('.timeIcon');
+ const clickBtn = document.querySelector('.clickBtn');
+ const dsply =document.querySelector('.dsply'); 
+ 
+ 
+ const rotateIcon = clickBtn.addEventListener('click', () => {
+  timeIcon.classList.toggle('timeIcons');
+  clickBtn.classList.toggle('clickBtns');
+  dsply.classList.toggle('dsplys');
+ });
+ </script>
+ <script>
+ 
+ 
+  const forTime = dayjs();
+ 
+  const dsplyTime = forTime.startOf('time');
+  const timeIs = dsplyTime.format('h:mm A');
+ 
+  dsply.innerHTML = timeIs;
+ </script>
+ 
+ <style>
+  .dsply{
+ display: none;
+   
+  }
+  .dsplys{
+ display: block;
+   font-family: Arial, Helvetica, sans-serif;
+   width: fit-content;
+   padding: 9px 7px;
+  }
+ </style>
