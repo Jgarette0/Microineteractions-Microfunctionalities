@@ -1,0 +1,119 @@
+<body>
+ <div class="icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="svg"><path d="m9 18 6-6-6-6"/>
+  </svg>
+ </div>
+ <div class="aside">
+  <div class="content">example</div>
+  <div class="content">example</div>
+  <div class="content">example</div>
+ </div>
+ <style>
+  body{
+ margin:0;
+}
+
+.icon{
+ background-color: #181818;
+ border-radius: 5px ;
+ padding:4px;
+ width: 26px;
+ height:26px;
+ display:flex;
+ align-items: center;
+ justify-content:center;
+ cursor:pointer;
+ position:fixed;
+ top:10px;
+ left:10px;
+ z-index:999;
+ transition: transform .43s;
+}
+.icon:hover , .icons:hover{
+ background-color: #252525;
+}
+
+.content{
+ width: 100%;
+ font-family: helvetica;
+ color: rgb(206, 206, 206);
+ padding: 10px;
+}
+.content:hover{
+ color: #fbfbfb;
+ background-color:#252525;
+}
+
+.aside{
+ width: 20%;
+ background-color: #181818;
+ border-top-right-radius: 10px; 
+ border-bottom-right-radius: 10px; 
+ padding-top: 40px;
+ position: fixed;
+ transition: transform .4s;
+ left:-310px;
+ top: 10px;
+ bottom: 10px;
+ box-sizing: border-box;
+ overflow: hidden;
+ display:flex;
+ flex-direction:column;
+ row-gap: 5px;
+ 
+}
+
+.asides{
+ width: 20%;
+ background-color: #181818;
+ top:10px;
+ bottom: 10px;
+ border-top-right-radius: 10px; 
+ border-bottom-right-radius: 10px; 
+ padding-top: 40px;
+ transform: translateX(309px);
+ box-sizing: border-box;
+ overflow: hidden;
+ display:flex;
+ flex-direction:column;
+ row-gap: 5px;
+}
+
+.icons{
+ transform: translateX(200px);
+ background-color:#181818;
+ border-radius: 5px ;
+ padding:4px;
+ width: 26px;
+ height:26px;
+ display:flex;
+ align-items: center;
+ justify-content:center;
+ cursor:pointer;
+ position:fixed;
+ top:10px;
+ left:10px;
+ z-index:999;
+}
+.svg{
+ color:#fbfbfb;
+ transition: transform .5s;
+}
+.svgs{
+ transform: rotate(-180deg);
+ color:#fbfbfb;
+}
+ </style>
+ <script>
+  const icon = document.querySelector('.icon');
+const aside = document.querySelector('.aside');
+const svg = document.querySelector('.svg');
+
+icon.addEventListener('click', () =>{
+ icon.classList.toggle('icons');
+ aside.classList.toggle('asides');
+ svg.classList.toggle('svgs');
+});
+ </script>
+</body>
+</html>
