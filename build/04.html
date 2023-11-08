@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Text Persistence</title>
+</head>
+<body>
+    <div id="content">Hello</div>
+    <button id="changeButton">Change Text</button>
+
+    <script>
+        // Check if the button text should be changed (on page load)
+        const buttonText = localStorage.getItem('buttonText');
+        if (buttonText === 'goodbye') {
+            document.getElementById('content').textContent = 'Goodbye';
+        }
+
+        // Add a click event listener to the button
+        document.getElementById('changeButton').addEventListener('click', () => {
+            const contentDiv = document.getElementById('content');
+
+            // Toggle the text content
+            if (contentDiv.textContent === 'Hello') {
+                contentDiv.textContent = 'Goodbye';
+                // Store the new text in localStorage
+                localStorage.setItem('buttonText', 'goodbye');
+            } else {
+                contentDiv.textContent = 'Hello';
+                // Remove the stored text from localStorage
+                localStorage.removeItem('buttonText');
+            }
+        });
+    </script>
+</body>
+</html>

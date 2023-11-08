@@ -66,7 +66,24 @@ body{
  display:flex;
  flex-direction:column;
  row-gap: 5px;
+ 
 }
+
+.asideContains{
+ overflow: hidden;
+ overflow-y: scroll;
+ 
+}
+.asideContains::-webkit-scrollbar {
+ width: 5px; 
+ background-color: transparent;
+}
+.asideContains::-webkit-scrollbar-thumb {
+ background-color: #fbfbfb; /* Color of the thumb */
+ border-radius: 50px;
+}
+
+
 
 .icons{
  transform: translateX(200px);
